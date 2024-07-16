@@ -62,3 +62,5 @@ This Clarity contract implements a simple voting system for proposals. It allows
 Voting Fee: Require users to pay a small STX fee to vote on a proposal. This can discourage spam and ensure users have a stake in the voting process.
 Weighted Voting: Assign voting weight based on STX token holdings. Users with more STX would have a greater influence on the vote outcome. (This approach requires careful consideration to avoid issues like plutocracy)
 Governance Token: Transform the proposal system into a Decentralized Autonomous Organization (DAO) where STX token holders govern the platform through proposals and voting.
+
+**Code for Stacks!!!**
