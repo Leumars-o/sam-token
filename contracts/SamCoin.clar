@@ -15,16 +15,17 @@
           (current-timestamp (get-block-height))
           (voting-power (get-voting-power voter))
           (is-cooldown-over (is-greater-than current-timestamp (uint-add last-vote-timestamp VOTING_COOLDOWN_SECONDS))))
-      (if (is-equal has-voted true)
+
+      (if (is-equal has-voted true) ;; User already voted
         (if (is-equal is-cooldown-over true)
           (begin
             (put-votes proposal-id (map-set votes voter choice))
             (put-has-voted voter proposal-id true)
             (put-last-vote-timestamp voter proposal-id current-timestamp)
             (emit-vote-cast (proposal-id) (voter) (choice) (voting-power))
-            (ok true)
+            (ok true) ;; Success
           )
-          (err "You can only vote once every week")
+          (err "You can only vote once every week") ;; Error: proposal closed
         )
         (begin
           (if (is-equal proposal.status "open")
