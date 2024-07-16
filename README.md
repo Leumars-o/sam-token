@@ -57,12 +57,8 @@ This Clarity contract implements a simple voting system for proposals. It allows
 (get-votes-for-proposal 1)
 ```
 
+## STX Token Integration (Future Exploration):
 
-## Further Development
-
-* **Proposal Management:** Implement functions to create, update, and close proposals.
-* **Result Calculation:** Add logic to calculate the result of a vote based on the number of votes for and against.
-* **Access Control:** Implement access control mechanisms to restrict who can create or manage proposals.
-* **Token Integration:** Integrate the voting system with a token contract to allow users to vote using tokens.
-
-This contract provides a foundation for building a robust voting system on the Stacks blockchain. You can customize and extend it to meet your specific requirements.
+Voting Fee: Require users to pay a small STX fee to vote on a proposal. This can discourage spam and ensure users have a stake in the voting process.
+Weighted Voting: Assign voting weight based on STX token holdings. Users with more STX would have a greater influence on the vote outcome. (This approach requires careful consideration to avoid issues like plutocracy)
+Governance Token: Transform the proposal system into a Decentralized Autonomous Organization (DAO) where STX token holders govern the platform through proposals and voting.
